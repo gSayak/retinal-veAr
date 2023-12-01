@@ -1,0 +1,48 @@
+{
+  "preprocess":
+  {
+    "splitNum": 600,
+    "dataPath": "/data2/chenchouyu/OpenAccess/data/",
+    "dataSets": "HRF",
+    "patchSize": 256,
+    "resources":
+      {
+        "HRF": "/data2/chenchouyu/arteryVeinDatasets/HRF_AV",
+        "DRIVE": "/data2/chenchouyu/arteryVeinDatasets/DRIVE_AV",
+        "LES": "/data2/chenchouyu/arteryVeinDatasets/LES_AV"
+      }
+  },
+
+  "net":
+  {
+
+    "inputFeature": 4,
+    "outputFeature": 4,
+
+    "MVE": true,
+    "MAE": true,
+    "MFI": true,
+
+    "alpha": 1.0
+  },
+
+  "setting":
+  {
+    "device": 0,
+    "patchSize": 256,
+    "batchSize": 4,
+    "numWorkers": 0,
+    "path": "/data2/chenchouyu/OpenAccess/data",
+    "savePath": "/data2/chenchouyu/OpenAccess"
+  },
+
+  "train":
+  {
+
+    "lr": 0.01,
+    "epoch": 150,
+    "decayEpoch": 50,
+    "decayRate": 0.1
+  }
+}
+
